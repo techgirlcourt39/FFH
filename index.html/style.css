@@ -1,7 +1,15 @@
+body {
+  background-color: whitesmoke;
+  margin: auto;
+  max-width: 1500px;
+}
+
 header {
   background-color: whitesmoke;
   font-family: Spectral;
   max-width: 1500px;
+  margin: 0 auto;
+  
 }
 
 .header-grid {
@@ -13,16 +21,12 @@ header {
   
 }
 
-.grid-item {
-  text-align: center;
+.log {
+  grid-column: 1 / span 1;
 }
 
 .logo img {
-  text-align: center;
-  height: 240px;
-  margin-bottom: 25px;
-  margin-top: 5px;
-  margin-left: 35px;
+  height: 250px;
 }
 
 .nav a {
@@ -47,17 +51,24 @@ header {
   font-weight: bold;
 }
 
+.contact {
+  grid-column: 3 / span 1;
+  display: flex;
+  align-items: center;
+}
+
 .contact img {
-  max-height: 30px;
-  margin-right: 0px;
+  height: 30px;
+  margin-right: 20px;
+  
   
   
 }
 
 .contact p {
+  margin: 0;
   font-size: 20px;
-  margin: 30px;
-  
+  margin-left: 40px;
   
 }
 
@@ -72,19 +83,37 @@ header {
   grid-column: 1 / span 3;
   width: 100%;
   height: 400px;
+  position: relative; /* add a position property to the image */
+  margin-right: 90px;
 }
 
 .text-container {
-  position: absolute; /* set the position property to absolute */
-  grid-column: 1 / span 3;
-  bottom: 0; /* position the container at the bottom */
-  left: 600px; /* position the container at the left */
-  right: 0; /* position the container at the right */
-  z-index: 1; /* set the z-index to a value greater than the image */
-  padding: 20px; /* add some padding to the container */
-  color: black; /* set the text color to white to make it visible on the image */
+  position: absolute;
+  grid-column: 3 / span 3;
+  bottom: 0; /* position the container at the bottom of its containing block */
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+  color: black;
   font-size: 40px;
   font-family: 'Dancing Script', cursive;
   color: #258694;
-  margin-bottom: 170px;
+  margin-bottom: 200px;
+  margin-right: 50px;
+}
+
+
+
+.bottom-text {
+  text-align: center;
+  font-size: 24px;
+  font-family: Spectral;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+  .text-container {
+    grid-column: 3 / 4;
+    
+  }
 }
