@@ -118,3 +118,20 @@ header {
   }
 }
 
+@media screen and (min-width: 1660px) {
+  .text-container {
+    position: absolute;
+    grid-column: 3 / span 3;
+    bottom: 0; /* position the container at the bottom of its containing block */
+    right: 0;
+    z-index: 1;
+    padding: 20px;
+    color: black;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    color: #258694;
+    margin-bottom: 360px;
+    margin-right: 300px;
+  }
+}
+
